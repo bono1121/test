@@ -11,3 +11,5 @@
 );
 
 create sequence seqCustomer;
+
+--git 테스트
