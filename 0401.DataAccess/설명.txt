@@ -6,4 +6,4 @@
 =>스프링 mvc+db(bookstore의 customer를 crud구현)
 =>리소스 다루는 법
 
-테스즈2
+테스즈3
