@@ -1,0 +1,35 @@
+﻿
+[사용환경 설정]
+1.프로젝트 생성시 pom.xml 오류 : org.apache.maven.plugin.war.WarMojo
+ : 해결방법 - C:\Users\hsr\.m2\repository 안의 내용들을 모두 삭제 한다.
+ 
+ 2.pom.xml의 Spring/자바 버전 변경
+ 
+ 	<properties>
+		<java-version>1.8</java-version>
+		<org.springframework-version>4.0.0.RELEASE</org.springframework-version>
+		<org.aspectj-version>1.6.10</org.aspectj-version>
+		<org.slf4j-version>1.6.6</org.slf4j-version>
+	</properties>
+	
+3.web.xml 설명 -한글이 깨지지 않게 encoding filter 추가가 필요하다.
+
+4.resources 태크 설명
+  0)이미지, css, js 등의 정적 리소스가 처리되는 위치 매핑
+    
+  
+[mvc]  
+5.servlet-context.xml 보면서 mvc 흐름 설명
+
+6.RequestMappingExController : @RequestMapping 에 대한 내용
+
+7.ViewResolverExController : 뷰 리졸버 사용법에 대한 설명
+
+
+*controller 패키지를 따로 두는 경우에는 context:component-scan태그의 base-package값을 변경해야 한다.
+ <context:component-scan base-package="com.miyoung" />	
+
+
+
+
+	
