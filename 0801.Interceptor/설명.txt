@@ -1,0 +1,11 @@
+﻿1.user-context.xml에 등록	
+	<interceptors>
+		<interceptor>  
+			<mapping path="/private"/>
+			<beans:bean class="com.customer.interceptor.AuthInterceptor"></beans:bean>
+		</interceptor>
+	</interceptors>
+
+2.필터와 유사하다 생각하면 된다.
+3.필터는 web.xml에 등록하여 웹 어플리케이션 전반에 영향을 끼치고
+   인터셉터는 스프링 context에 등록되어 해당 환경에만 영향을 끼친다.

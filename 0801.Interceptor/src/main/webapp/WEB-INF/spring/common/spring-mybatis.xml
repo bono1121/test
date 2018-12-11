@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+	
+
+
+	<!-- mybatis & spring 프레임워크 통합 설정 1)2)3) -->	
+	
+			
+	<!-- 1)세센 팩토리 생성을 위해  SqlSessionFactoryBean 빈을 생성-->
+	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource" />
+	    <beans:property name="configLocation" value="/WEB-INF/mybatis/mybatis-config.xml"/>  
+	</beans:bean>
+	
+	
+	<!-- 2)세션을 생성하기 위해  org.mybatis.spring.SqlSessionTemplate 빈 생성 -->
+	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<beans:constructor-arg index="0" ref="sqlSessionFactory" />
+	</beans:bean> 
+
+	
+	<!-- 3)mapper interface 설정 방법1-->
+<!-- 	<beans:bean id="customerMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<beans:property name="mapperInterface"
+			value="com.customer.mapper.CustomerMapper" />
+		<beans:property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</beans:bean>
+	
+	<beans:bean id="annotationCustomerMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<beans:property name="mapperInterface"
+			value="com.customer.mapper.AnnotationCustomerMapper" />
+		<beans:property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</beans:bean>	
+     -->
+    <!-- 3)mapper interface 설정 방법2 : 1.2.0 버전 이후 사용가능 -->
+	<mybatis:scan base-package="com.customer.mapper" />
+
+</beans:beans>
