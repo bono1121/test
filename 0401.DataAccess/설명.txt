@@ -1,0 +1,7 @@
+﻿
+1.spring mvc + jdbc 처리 해보기 
+2.ojdbc6.jar 추가
+3.customer-context.xml : dataSource 빈 생성
+
+=>스프링 mvc+db(bookstore의 customer를 crud구현)
+=>리소스 다루는 법
