@@ -12,4 +12,4 @@
 
 create sequence seqCustomer;
 
---git 테스트1
+--git 테스트3
