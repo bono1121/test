@@ -1,0 +1,38 @@
+<!-- 리스트 뷰 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>My Title</h1>
+        </div>
+        <!-- /header -->
+        <div data-role="content">
+        <!-- data-inset="true": inset 모듈처럼 보이게 함(모서리 둥글게-false 와 비교해보기)
+             data-filter="true" : 동적 검색 필터 추가 -->
+             <ul data-role="listview" data-inset="true" data-filter="true">
+                <li><a href="#">Benz</a></li>
+                <li><a href="#">BMW</a></li>
+                <li><a href="#">AUDI</a></li>
+                <li><a href="#">현대자동차</a></li>
+                <li><a href="#">기아자동차</a></li>
+            </ul>
+        </div>
+        <!-- /content -->
+        <div data-role="footer">
+            <h4>Thank you!</h4>
+        </div>
+        <!-- /footer -->
+    </div>
+    <!-- /page -->
+</body>
+</html>

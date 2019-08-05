@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html> 
+<html> 
+	<head>
+    <meta charset="utf-8">	
+	<title>레스토랑 추천 앱</title> 
+	
+	<!-- 
+		width=device-width 장치의 너비 전체를 너비로 둔다는 뜻
+		initial-scale=1 줌 레벨인데 1은 축소 확대 없다는 것을 의미 
+		(숫자가 커지면 확대되어서 나타나고=>5, 숫자가 0<x<1 사이면 축소되어 나타남 =>0.5) 
+	-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
+</head> 
+
+<body> 
+<!-- data-theme 속성의 값 종류 : a,b,c,d,e -->
+<div data-role="page" id="home" data-theme="a">
+
+	<div data-role="content">
+	<div id="title">
+		<h1>레스토랑 추천 </h1>
+	</div>
+	
+	<div class="choice_list"> 
+	<h1> 음식의 종류를 선택하세요.</h1>
+
+	<ul data-role="listview" data-inset="true" >
+	<li><a href="072.choose_town.html" data-transition="slidedown"> <img src="korean.jpg"/> <h3> 한정식</h3></a></li>
+	<li><a href="072.choose_town.html"  data-transition="slidedown"> <img src="western.jpg"/> <h3> 양식 </h3></a></li>
+	<li><a href="072.choose_town.html"  data-transition="slidedown"> <img src="burger.jpg"/> <h3> 햄버거</h3></a></li>
+	<li><a href="072.choose_town.html"  data-transition="slidedown"> <img src="pizza.jpg"/> <h3> 피자</h3></a></li>
+	<li><a href="072.choose_town.html"  data-transition="slidedown"> <img src="buffet.jpg"/> <h3> 부페 </h3></a></li>
+	<li><a href="072.choose_town.html"  data-transition="slidedown"> <img src="chinese.jpg"/> <h3>중국식 </h3></a></li>	
+	</ul>	
+	
+	</div>
+	</div>
+
+</div><!-- /page -->
+</body>
+</html>
